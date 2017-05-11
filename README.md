@@ -2,7 +2,7 @@
 A repo containing codelabs for day 3
 
 Application: 
-This is a javascript appplication that takes in a string as argument and returns a reverse of the string. If argument is a palindrome, it returns 'true'
+This is a javascript appplication that has a class StringSplosion which takes in a string as argument and returns a sploded version of the string. 
 It comes with some test cases written in jasmine javascript.
 
 Installation:
