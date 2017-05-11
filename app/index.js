@@ -1,18 +1,17 @@
 'use strict'
 
-const reverseString = function (word) {
-	if (word == '') {
-		return (null);
-	} else {
-	    let final = [];
-	    for (let i in word){
-	    	final.push(word[(word.length - 1) - i]);
-	    	}
-	    	let result = final.join('');
-	    	if (result == word) {
-	    		result = true;
-	    	}
-	    return result;
+const StringSplosion = function(string)  {
+	this.string = string;
+	this.manipulate = function() {
+		let result = '';
+    	for (let i = 1; i <= this.string.length; i++) {
+        	let word = this.string.slice(0,i);
+        	result += word;
+    	}
+    //console.log(typeof result);
+    this.string = result.toString();
+    return this.string;
 	}
 }
-module.exports = reverseString
+
+module.exports = StringSplosion
