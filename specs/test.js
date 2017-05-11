@@ -1,47 +1,37 @@
 'use strict'
 
 const jasmine = require('jasmine');
-const reverseString = require('../app/index.js');
+const StringSplosion = require('../app/index.js');
 
-describe("Produce the reverse order of a word: ", function() {
-  describe("Case for en empty string", function() {
+describe(" String splosion", function(){
 
-    it("should return null for empty string", function() {
-      expect(reverseString('')).toEqual(null);
+    it("should manipulate the string", function(){
+        var stringSplosion = new StringSplosion("Code");
+        expect(stringSplosion.manipulate()).toEqual("CCoCodCode");
     });
 
-  });
-
-  describe("Case for palindromes", function() {
-
-    it("should return true for `anna`", function() {
-      expect(reverseString('anna')).toEqual(true);
+    it("should manipulate the string not return the expected result, 1.", function(){
+        var stringSplosion = new StringSplosion("Code");
+        var functionString = stringSplosion.manipulate.toString();
+        expect(stringSplosion.manipulate()).toEqual("CCoCodCode");
+        expect(functionString.indexOf('CCoCodCode')).toBe(-1);
     });
 
-    it("should return true for `NaN`", function() {
-      expect(reverseString('NaN')).toEqual(true);
+    it("should manipulate a second time", function(){
+        var stringSplosion = new StringSplosion("abc");
+        expect( stringSplosion.manipulate()).toEqual("aababc");
     });
 
-    it("should return true for `civic`", function() {
-      expect(reverseString('civic')).toEqual(true);
+    it("should manipulate a third time", function(){
+        var stringSplosion = new StringSplosion("andela");
+        var functionString = stringSplosion.manipulate.toString();
+        expect(stringSplosion.manipulate()).toEqual("aanandandeandelandela");
     });
 
-  });
-
-  describe("Case for normal words", function() {
-
-    it("should return `skoob` for `books`", function() {
-      expect(reverseString('books')).toEqual('skoob');
+     it("should manipulate the string not return the expected result, 2.", function(){
+        var stringSplosion = new StringSplosion("andela");
+        var functionString = stringSplosion.manipulate.toString();
+        expect( stringSplosion.manipulate()).toEqual("aanandandeandelandela");
+        expect(functionString.indexOf('aanandandeandelandela')).toBe(-1);
     });
-
-    it("should return `nomolos` for `solomon`", function() {
-      expect(reverseString('solomon')).toEqual('nomolos');
-    });
-
-    it("should return `csim` for `misc`", function() {
-      expect(reverseString('misc')).toEqual('csim');
-    });
-
-  });
-
 });
