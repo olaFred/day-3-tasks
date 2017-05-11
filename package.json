@@ -1,7 +1,7 @@
 {
   "name": "day-3-tasks",
   "version": "1.0.0",
-  "description": "Reverse string task for day 3 ",
+  "description": "Second codelab task for day 3 ",
   "main": "index.js",
   "scripts": {
     "test": "jasmine"
@@ -12,8 +12,9 @@
   },
   "keywords": [
     "jasmine",
-    "javscript",
-    "strings"
+    "test",
+    "javascript",
+    "OOP"
   ],
   "author": "Fred Adewole",
   "license": "ISC",
