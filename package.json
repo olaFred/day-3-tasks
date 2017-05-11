@@ -1,0 +1,24 @@
+{
+  "name": "day-3-tasks",
+  "version": "1.0.0",
+  "description": "Reverse string task for day 3 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olaFred/day-3-tasks.git"
+  },
+  "keywords": [
+    "jasmine",
+    "javscript",
+    "strings"
+  ],
+  "author": "Fred Adewole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olaFred/day-3-tasks/issues"
+  },
+  "homepage": "https://github.com/olaFred/day-3-tasks#readme"
+}
